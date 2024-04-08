@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "SCC Companion",
+  "version": "0.1",
+
+  "description": "Make being Commanding Officer great again.",
+
+  "icons": {
+    "48": "icons/scc-48.png",
+    "96": "icons/scc-96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://sd.suse.com/*"],
+      "js": ["scc-companion.js"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    "icons/scc-24.png"
+  ]
+}
