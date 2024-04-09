@@ -12,3 +12,9 @@ scc_link.setAttribute("title", `Find ${reporter_email} in SCC …`);
 scc_link.append(scc_button);
 
 reporter_elem.after(scc_link);
+
+
+const text_elem = document.querySelector(".user-content-block");
+const content = text_elem.innerHTML;
+
+text_elem.innerHTML = content.replace(/\bA\d{6}\b/g, (match) => `${match} <a href="https://scc.suse.com/customer-management#!/search/${match}">${scc_button.outerHTML}</a>`);
